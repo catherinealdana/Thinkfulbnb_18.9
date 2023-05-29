@@ -1,4 +1,4 @@
-/* -------  General Styles ------- */
+/* ------- General Styles ------- */
 
 body {
   font-family: "Lato", sans-serif;
@@ -34,7 +34,7 @@ main img {
   width: 100%;
 }
 
-/* ---  Groups & Items --- */
+/* --- Groups & Items --- */
 
 .group {
   display: flex;
@@ -43,14 +43,14 @@ main img {
 
 .item {
   flex: 1;
-  margin:10px;
+  margin: 10px;
 }
 
 .item-double {
   flex: 2;
 }
 
-/* -------  Navigation ------- */
+/* ------- Navigation ------- */
 
 header {
   background-color: #ff385c;
@@ -88,7 +88,7 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* -------  Search Form ------- */
+/* ------- Search Form ------- */
 form {
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@ form button {
   width: 100%;
 }
 
-/* -------  Footer ------- */
+/* ------- Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -130,9 +130,11 @@ footer p {
   padding: 20px;
 }
 
-/* -------  Media Query ------- */
+/* ------- Media Queries ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) and (max-width: 599px) {
+  /* Styles for devices with width between 480px and 599px */
+  
   header {
     background-color: #ff385c;
     display: flex;
@@ -157,29 +159,19 @@ footer p {
   }
 
   .vacation-form .item {
-    display: flex block;
+    display: flex;
     flex: 1 1 auto;
     flex-direction: column;
   }
 
-  .item label
-  , .item input 
-  , .item select 
-  , .item button{
+  .item label,
+  .item input,
+  .item select,
+  .item button {
     display: flex;
-    width: 100%
+    width: 100%;
   }
 
   .grid-column {
     display: flex;
-    flex: 1;
-    flex-direction: column; 
-    margin: 10px;
-  }
-
-  .grid-row {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-  }
-}
+    flex: 
