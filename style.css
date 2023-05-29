@@ -35,6 +35,7 @@ main img {
 }
 
 /* --- Groups & Items --- */
+
 .group {
   display: flex;
   flex-direction: column;
@@ -132,6 +133,7 @@ header nav ul li:last-child a {
 }
 
 /* ------- Search Form ------- */
+
 form {
   border: 2px solid #ff385c;
   padding: 10px;
@@ -187,6 +189,7 @@ footer p {
 }
 
 /* ------- Media Query ------- */
+
 @media all and (min-width: 480px) {
   header {
-    justify-content: space
+    justify
