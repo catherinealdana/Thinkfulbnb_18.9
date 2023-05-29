@@ -1,4 +1,4 @@
-/* -------  General Styles ------- */
+/* ------- General Styles ------- */
 
 body {
   font-family: "Lato", sans-serif;
@@ -34,71 +34,39 @@ main img {
   width: 100%;
 }
 
-/* ---  Groups & Items --- */
-  .group {
-    display: flex;
-    flex-direction: column;
-  }
+/* --- Groups & Items --- */
 
-  .item {
-    display: flex;
-    flex: 1;
-    padding: 10px;
-  }
-
-  .item-double {
-    display: flex;
-    flex: 2;
-  }
-
- .idea-group {
-  display: flex;
-  flex-direction: column;  
-}
-
-.idea-top, .idea-bottom {
+.group {
   display: flex;
   flex-direction: column;
+}
+
+.item {
+  flex: 1;
   margin: 10px;
 }
 
-.host-group {
-  display: flex;
-  flex-direction: column;  
-  padding: 10px;
+.item-double {
+  flex: 2;
 }
 
-.host-group h2 {
-  padding: 10px;
-}
-
-.host-item {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.host-item-double img {
-  display: flex;
-  padding: 10px;
-}
-
-/* -------  Navigation ------- */
+/* ------- Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 15vw;
+  font-size: 50px;
   color: #fff;
+}
 
+header nav ul {
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -108,7 +76,11 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  margin: 0 20px 0 0;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 20px;
 }
 
 header nav ul li a:hover {
@@ -116,38 +88,25 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
-
-}
-
-header nav ul {
-  display: flex;
-  padding-left: 0;
-  list-style: none;
-}
-
-header nav ul li:last-child a {
-  margin-right: 0;
-}
-/* -------  Search Form ------- */
+/* ------- Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 2px solid #ff385c;
+  padding: 10px;
 }
 
-
 form label {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 form button {
@@ -155,27 +114,11 @@ form button {
   border: none;
   color: #fff;
   font-size: 24px;
-  padding: 20px 30px;
+  padding: 15px;
   width: 100%;
-  
 }
 
-.form-row {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  flex-wrap: wrap;
-}
-.form-row label {
-  flex: 1;
-}
-
-.form-row input, .form-row select {
-  flex: 1;
-}
-
-
-/* -------  Footer ------- */
+/* ------- Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -187,57 +130,48 @@ footer p {
   padding: 20px;
 }
 
-/* -------  Media Query ------- */
-@media all and (min-width: 480px){
+/* ------- Media Queries ------- */
+
+@media all and (min-width: 480px) and (max-width: 599px) {
+  /* Styles for devices with width between 480px and 599px */
+  
   header {
-    justify-content: space-between;
+    background-color: #ff385c;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav {
+    padding: 10px;
   }
 
   form {
     flex-direction: row;
-    justify-content: space-between;
-    
-
-  }
- 
-  .form-row {
-     flex-direction: column;
   }
 
- .group {
-  flex-direction: row;
- }
-
- .item-double p {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
- }
-
-  .idea-top, .idea-bottom {
-    flex: 1;
+  .group {
+    display: flex;
     flex-direction: row;
-    
-    
-  }
-  .idea1, .idea2, .idea3, .idea4 {
-    flex: 1;
-    padding: 10px;
-    
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
   }
 
-  .host-group {
-    flex-direction: row;
-    
+  .vacation-form .item {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
   }
 
-  .host-item {
-    min-width: 48.5%;
-    padding: 10px;
+  .item label,
+  .item input,
+  .item select,
+  .item button {
+    display: flex;
+    width: 100%;
   }
 
-  .logo {
-    font-size: 72px;
-  }
-}
+  .grid-column {
+    display: flex;
+    flex: 
